@@ -1,0 +1,6 @@
+.github/
+.vscode/
+.eslintrc*
+Dockerfile
+README.md
+LICENSE
