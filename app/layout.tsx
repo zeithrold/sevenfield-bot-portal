@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import './globals.css'
 
 export default function RootLayout({
