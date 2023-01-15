@@ -1,29 +1,27 @@
 import { PrimaryGeneratedColumn, Column, BaseEntity, Entity } from "typeorm";
 
 @Entity()
-export class Recall extends BaseEntity {
+export class UserGroup extends BaseEntity {
   @PrimaryGeneratedColumn()
   id?: number;
 
   @Column({
-    length: 36
+    length: 36,
   })
   uuid?: string;
-  
-  @Column({
-    type: 'bigint',
-    width: 20
-  })
-  time?: number;
 
   @Column({
-    length: 16
+    length: 32,
   })
-  status?: string;
+  code?: string;
 
   @Column({
-    type: 'bigint',
-    width: 20
+    length: 32,
   })
-  operator_id?: number;
+  name?: string;
+
+  @Column({
+    type: "int",
+  })
+  allowedJudgeCounts?: number;
 }
